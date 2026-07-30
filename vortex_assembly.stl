@@ -1,0 +1,44 @@
+solid vortex_assembly
+  facet normal 1.00 0.00 0.00
+    outer loop
+      vertex 0.00 8.00 -25.00
+      vertex 0.00 8.00 25.00
+      vertex 0.00 6.93 25.00
+    endloop
+  endfacet
+  facet normal 1.00 0.00 0.00
+    outer loop
+      vertex 120.00 6.00 0.00
+      vertex 120.00 8.00 0.00
+      vertex 120.00 6.93 4.00
+    endloop
+  endfacet
+  facet normal 0.00 0.00 1.00
+    outer loop
+      vertex 0.00 2.00 25.00
+      vertex 0.00 9.00 25.00
+      vertex 0.00 7.79 25.00
+    endloop
+  endfacet
+  facet normal 0.00 0.00 1.00
+    outer loop
+      vertex 0.00 2.00 45.00
+      vertex 0.00 9.00 45.00
+      vertex 0.00 7.79 45.00
+    endloop
+  endfacet
+  facet normal 0.00 1.00 0.00
+    outer loop
+      vertex 0.00 9.00 25.00
+      vertex 0.00 9.00 45.00
+      vertex 0.00 7.79 45.00
+    endloop
+  endfacet
+  facet normal 0.00 -1.00 0.00
+    outer loop
+      vertex 0.00 2.00 25.00
+      vertex 0.00 2.00 45.00
+      vertex 0.00 1.73 45.00
+    endloop
+  endfacet
+endsolid vortex_assembly
