@@ -1,27 +1,30 @@
-# Open-Source Cold Eco-Dryer (Ranque-Hilsch Vortex Tube)
+# Low-Cost Cold Air Dehydrator Using Ranque-Hilsch Vortex Tube
 
-An ultra-budget, eco-friendly cold drying system designed for delicate organic products (herbs, berries, microgreens) using the Ranque-Hilsch Vortex Effect.
+A minimal, open-source cold drying system designed for thermal-sensitive bio-materials (herbs, berries, and cellular samples). 
 
-## 📌 Problem & Solution
-Traditional heat-based dehydrators destroy heat-sensitive vitamins and antioxidants in delicate produce. Industrial vacuum-freeze dryers cost upwards of $1000+. 
+Standard thermal dehydrators degrade heat-sensitive antioxidants and vitamins through high temperatures, while commercial freeze-dryers remain cost-prohibitive ($1,000+). This project demonstrates a $20–$30 alternative using micro-vortex fluid dynamics to remove moisture at ambient temperature.
 
-This project utilizes a Ranque-Hilsch Vortex Tube made from standard mechanical fittings to separate compressed air into hot and cold/dry streams, enabling zero-heat moisture removal for under $30.
+## 🔬 Physics & Working Principle
+The core mechanism relies on compressed air dynamic energy separation inside a customized 1/2" T-fitting (Ranque-Hilsch Vortex Effect). 
 
-## 🛠️ Hardware Requirements
-* Microcontroller: Raspberry Pi Pico (RP2040)
-* Sensor: DHT22 (Temperature & Relative Humidity)
-* Actuator: 5V Relay Module (to control air compressor)
-* Core: 1/2" T-Fitting + 25cm PVC Tube + Tangential Nozzle
-* Dryer Chamber: Sealed 5L Food Container with mesh tray
+1. Compressed air enters tangentially into the swirl chamber.
+2. The outer high-velocity vortex loses kinetic energy and exhausts warm air through the control valve.
+3. The inner low-pressure core expands rapidly, drops in temperature, and yields dry air that absorbs moisture from the drying chamber without heat damage.
 
-## 📐 Vortex Tube Specifications
-* Main Tube Inner Diameter ($D$): 12 mm
-* Hot Tube Length: 250 mm (~20D)
-* Diaphragm Orifice: 4 mm (1/3D)
-* Compressed Air Inlet: 4 mm (Tangential)
+## 🛠️ System Components
+* Controller: Raspberry Pi Pico (RP2040) / MicroPython
+* Sensor: DHT22 (Precision RH% and temperature monitoring)
+* Actuator: 5V Optocoupler Relay Module
+* Vortex Chamber: Modified brass T-fitting with 3D-printed tangential nozzle insert
 
-## 🚀 MicroPython Control Logic
-The system monitors relative humidity inside the chamber in real-time and automatically shuts off the air compressor via a relay when target dryness is reached.
+## 📐 Vortex Tube Critical Dimensions
+* Chamber Inner Diameter ($D$): 12 mm
+* Hot Tube Length: 250 mm (~20.8$D$)
+* Cold Diaphragm Orifice: 4 mm (~0.33$D$)
+* Inlet Nozzle: 4 mm tangential entry
 
-## 📜 License
-This project is open-source and available under the [MIT License](LICENSE).
+## 💻 Control Logic
+The MicroPython script reads chamber RH% via DHT22 every 2 seconds. Once relative humidity drops to the target threshold (default: 15%), the controller trips the relay, halting the compressor to optimize power consumption.
+
+## 📄 License
+MIT License - Open for modification and research use
