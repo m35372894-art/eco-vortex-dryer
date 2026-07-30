@@ -1,9 +1,0 @@
-solid vortex_nozzle
-  facet normal 0 0 1
-    outer loop
-      vertex 0 0 0
-      vertex 12 0 0
-      vertex 0 12 0
-    endloop
-  endfacet
-endsolid vortex_nozzle
