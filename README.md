@@ -25,6 +25,3 @@ The core mechanism relies on compressed air dynamic energy separation inside a c
 
 ## Control Logic
 The MicroPython script reads chamber RH% via DHT22 every 2 seconds. Once relative humidity drops to the target threshold (default: 15%), the controller trips the relay, halting the compressor to optimize power consumption.
-
-## License
-MIT License - Open for modification and research use
